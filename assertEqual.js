@@ -1,6 +1,6 @@
 // FUNCTION IMPLEMENTATION
 const assertEqual = function(actual, expected) {
-  let result = (actual === expected) ? "✅✅✅ " + actual + " === " + expected : "❌❌❌ " + actual + " !== " + expected;
+  let result = (actual === expected) ? `✅✅✅ ${actual} === ${expected}` : `❌❌❌ ${actual} !== ${expected}`;
   console.log(result);
 };
 
