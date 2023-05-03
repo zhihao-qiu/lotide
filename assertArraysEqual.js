@@ -1,33 +1,29 @@
 // Assert Function to check if the function is working properly
-const assertEqual = function(result) {
-  console.log(result ? `✅✅✅ ` : `❌❌❌ `);
+const assertArraysEqual = function(actual, expected) {
+  let result = (eqArrays(actual,expected)) ? `✅✅✅ "${actual} === ${expected}` : `❌❌❌ ${actual} !== ${expected}`;
+  console.log(result);
 };
 
 const eqArrays = function(firstArray, secondArray) {
   // compare the length of two arrays, return false if it's consistent
   if (firstArray.length !== secondArray.length) {
-    assertEqual(false);
-    process.exit();
+    return (false);
   }
 
   // loop to compare each elements in these two arrays
   for (let i = 0; i < firstArray.length; i++) {
     // compare the value of each element
     if (firstArray[i] !== secondArray[i]) {
-      assertEqual(false);
-      process.exit();
+      return (false);
     }
   }
 
-  assertEqual(true);
-};
-
-// Get Function to receive two arrays
-const getArrays = function(arrays, arrayIndex) {
-  return (arrays[arrayIndex - 1]);
+  return (true);
 };
 
 
-const args = process.argv.slice(2);
-eqArrays(getArrays(args,1), getArrays(args,2));
-
+// TEST DATA
+assertArraysEqual([1, 2, 3], [1, 2, 3]); // => true
+assertArraysEqual([1, 2, 3], [3, 2, 1]); // => false
+assertArraysEqual(["1", "2", "3"], ["1", "2", "3"]); // => true
+assertArraysEqual(["1", "2", "3"], ["1", "2", 3]); // => false
