@@ -9,7 +9,7 @@ const head = function(array) {
 };
 
 // TEST CODE
-assertEqual(head([5,6,7]), 5);
-assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello");
-assertEqual(head(["Lighthouse"]), "Hello");
-assertEqual(head([]), "Hello");
+assertArraysEqual(head([5,6,7]), 5);
+assertArraysEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello");
+assertArraysEqual(head(["Lighthouse"]), "Hello");
+assertArraysEqual(head([]), "Hello");

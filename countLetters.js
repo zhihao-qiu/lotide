@@ -5,8 +5,7 @@ const assertEqual = function(actual, expected) {
   console.log(`   Expected: ${expected}   Actual Result: ${actual}`);
 };
 
-// allItems: an array of strings that we need to look through
-// itemsToCount: an object specifying what to count
+// lettersToCount: a text that we need to look through
 const countLetters = function(lettersToCount) {
   const results = {};
   const newLettersToCount = lettersToCount.replace(/ /g,'');

@@ -22,4 +22,4 @@ const eqArrays = function(firstArray, secondArray) {
 };
 
 // TEST CODE
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), false); // => should PASS
+assertArraysEqual(eqArrays([1, 2, 3], [1, 2, 3]), false); // => should PASS
