@@ -5,8 +5,8 @@ const assertEqual = function(actual, expected) {
 };
 
 // TEST CODE
-assertArraysEqual("Lighthouse Labs", "Bootcamp");
-assertArraysEqual("Lighthouse Labs", "Lighthouse Labs");
-assertArraysEqual(1, 1);
-assertArraysEqual(2, 1);
+assertEqual("Lighthouse Labs", "Bootcamp");
+assertEqual("Lighthouse Labs", "Lighthouse Labs");
+assertEqual(1, 1);
+assertEqual(2, 1);
 
