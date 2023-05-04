@@ -13,7 +13,7 @@ const findKeyByValue = function(dictionary, valueToFind) {
 
 // TEST CODE
 const bestTVShowsByGenre = {
-  sci_fi: "The Expanse",
+  scifi: "The Expanse",
   comedy: "Brooklyn Nine-Nine",
   drama:  "The Wire",
   educationInstitution: "Lighthouse Labs"
