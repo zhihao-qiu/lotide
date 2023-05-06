@@ -1,6 +1,7 @@
 // FUNCTION IMPLEMENTATION
 const assertEqual = function(actual, expected) {
-  let result = (actual === expected) ? `✅✅✅ ${actual} === ${expected}` : `❌❌❌ ${actual} !== ${expected}`;
+  const inspect = require('util').inspect; // <= add this line
+  let result = (actual === expected) ? `✅✅✅ Assertion Passed: ${inspect(actual)} === ${inspect(expected)}` : `🛑🛑🛑 Assertion Failed: ${inspect(actual)} !== ${inspect(expected)}`;
   console.log(result);
 };
 
@@ -8,7 +9,7 @@ const assertEqual = function(actual, expected) {
 const assertArraysEqual = function(actual, expected) {
   const inspect = require('util').inspect; // <= add this line
   let result = (eqObjects(actual, expected)) ? `✅✅✅ Assertion Passed: ${inspect(actual)} === ${inspect(expected)}` : `🛑🛑🛑 Assertion Failed: ${inspect(actual)} !== ${inspect(expected)}`;
-  console.log(actual);
+  console.log(result);
 };
 
 const eqArrays = function(firstArray, secondArray) {
@@ -79,6 +80,6 @@ const eqObjects = function(object1, object2) {
 // eqObjects(multiColorShirtObject  , longSleeveMultiColorShirtObject); // => false
 // assertArraysEqual(eqObjects(multiColorShirtObject  , longSleeveMultiColorShirtObject), false);
 
-eqObjects({ a: { z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 }); // => true
+// eqObjects({ a: { z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 }); // => true
 //eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 }) // => false
-assertArraysEqual(eqObjects({ a: { z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 }), true);
+assertArraysEqual({ a: { z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 }, true);
