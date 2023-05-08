@@ -27,9 +27,4 @@ describe("#head", () => {
   });
 });
 
-// TEST CODE for head
-// objAssert.assertEqual(head([5, 6, 7]), 5);
-// objAssert.assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello");
-// objAssert.assertEqual(head(["Lighthouse"]), "Hello");
-// objAssert.assertEqual(head([]), "Hello");
 
