@@ -1,5 +1,5 @@
 const assert = require('chai').assert;
-const middle   = require('../middle');
+const objProcessing = require('../index');
 
 // TEST CODE for middle
 // objAssert.assertMiddle([1], []); // => true
@@ -10,27 +10,27 @@ const middle   = require('../middle');
 // objAssert.assertMiddle([1, 2, 3, 4, 5, 6], [3, 4]); // => true
 describe("#middle", () => {
   it("returns [] for [1]", () => {
-    assert.sameOrderedMembers(middle([1]), []);
+    assert.sameOrderedMembers(objProcessing.middle([1]), []);
   });
 
   it("returns [] for [1, 2]", () => {
-    assert.sameOrderedMembers(middle([1,2]), []); 
+    assert.sameOrderedMembers(objProcessing.middle([1, 2]), []);
   });
 
   it("returns [2] for [1, 2, 3]", () => {
-    assert.sameOrderedMembers(middle([1, 2, 3]), [2]); 
+    assert.sameOrderedMembers(objProcessing.middle([1, 2, 3]), [2]);
   });
 
   it("returns [3] for [1, 2, 3, 4, 5]", () => {
-    assert.sameOrderedMembers(middle([1, 2, 3, 4, 5]), [3]); 
+    assert.sameOrderedMembers(objProcessing.middle([1, 2, 3, 4, 5]), [3]);
   });
 
   it("not returns '[3, 4]]' for [1, 2, 3, 4, 5, 6]", () => {
-    assert.sameOrderedMembers(middle([1, 2, 3, 4, 5, 6]), [3, 4]); 
+    assert.sameOrderedMembers(objProcessing.middle([1, 2, 3, 4, 5, 6]), [3, 4]);
   });
 
   it("not returns '[2, 3]]' for [1, 2, 3, 4]", () => {
-    assert.sameOrderedMembers(middle([1, 2, 3, 4]), [2, 3]); 
+    assert.sameOrderedMembers(objProcessing.middle([1, 2, 3, 4]), [2, 3]);
   });
 
 });
